@@ -1,5 +1,12 @@
 #**Behavioral Cloning** 
 
+[//]: # (Image References)
+
+[overal_architecture]: ./examples/architecture.png "Overal Neural Network Archiecture"
+[orgin_image]: ./examples/before_flip.jpg "Original Image"
+[flipped_image]: ./examples/after_flip.png "Flipped Image"
+[image_in_center]: ./examples/drive_center.jpg "Drive In Center"
+
 **Behavioral Cloning Project**
 
 The goals / steps of this project are the following:
@@ -79,17 +86,17 @@ The final model architecture (model.py lines 18-24) consisted of a convolution n
 
 Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
 
-![Overall Architecture][./examples/architecture.png]
+![alt text][overal_architecture]
 ####3. Creation of the Training Set & Training Process
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
-![Drive in center][../examples/drive_center.jpg]
+![alt text][image_in_center]
 
 To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
 
-![Orgin Image][../examples/before_flip.jpg]
-![Flip ][../examples/after_flip.png]
+![alt text][orgin_image]
+![alt text][flipped_image]
 
 
 After the collection process, I had 3717 number of data points. I then preprocessed this data by Cropping image and normalize image.
