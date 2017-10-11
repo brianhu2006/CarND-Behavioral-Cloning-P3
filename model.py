@@ -67,7 +67,7 @@ def generator(samples, batch_size=32, valid=False):
                     # print(type(img_left))
                     add_flip_image(images, angles, img_left, steering_left)
 
-                    steering_right = steering_center - correction
+                    steering_right = steering_center - 0.22
 
                     img_right = cv2.imread(
                         path + batch_sample[2].split('/')[-1])
@@ -112,7 +112,7 @@ validation_generator = generator(
 # print(len(validation_samples))
 
 history_object = model.fit_generator(train_generator, steps_per_epoch=len(
-    train_samples) // train_batch_size + 1, validation_data=validation_generator, validation_steps=len(validation_samples) // valida_batch_size + 1, verbose=1, epochs=4)
+    train_samples) // train_batch_size + 1, validation_data=validation_generator, validation_steps=len(validation_samples) // valida_batch_size + 1, verbose=1, epochs=6)
 
 
 # model.fit_generator(train_generator, samples_per_epoch=len(
